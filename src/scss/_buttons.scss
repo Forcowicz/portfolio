@@ -1,0 +1,47 @@
+.btn {
+  display: inline-block;
+
+  padding: map-get($spacings, 2) map-get($spacings, 3);
+
+  text-align: center;
+  font-weight: 500;
+
+  border-radius: 3px;
+  box-shadow: $shadow-grey-normal;
+  transition: $transition-primary;
+
+  &:hover {
+    box-shadow: $shadow-grey-spread;
+  }
+
+  & > .bi {
+    font-size: $fs-regular;
+    color: $color-white;
+
+    opacity: 0.8;
+  }
+
+  &--primary {
+    color: $color-black;
+
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+
+  &--secondary {
+    color: $color-white;
+
+    background-color: $color-secondary;
+
+    &:hover {
+      background-color: $color-secondary-light;
+    }
+  }
+
+  &--block {
+    width: 100%;
+  }
+}

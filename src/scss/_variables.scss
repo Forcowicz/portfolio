@@ -1,0 +1,30 @@
+// Colors
+$color-primary: #ffd131;
+$color-primary-light: lighten($color-primary, 8%);
+$color-secondary: #090446;
+$color-secondary-light: lighten($color-secondary, 8%);
+$color-grey: #2b2b2b;
+$color-white: #f1f1f1;
+$color-black: #000;
+
+// Fonts:
+$ff-primary: "Roboto Mono", sans-serif;
+
+// Font sizes:
+$fs-regular: 1.6rem;
+
+// Spacer:
+$spacer: 1.4rem;
+
+// Shadows:
+$shadow-primary-normal: 0px 5px 24px 1px rgba(255, 209, 49, 0.4);
+$shadow-primary-spread: 0px 5px 39px 7px rgba(255, 209, 49, 0.4);
+
+$shadow-secondary-normal: 0px 5px 24px 1px rgba(9, 4, 70, 0.4);
+$shadow-secondary-spread: 0px 5px 39px 7px rgba(9, 4, 70, 0.4);
+
+$shadow-grey-normal: 0px 5px 24px 1px rgba(66, 68, 90, 0.4);
+$shadow-grey-spread: 0px 5px 39px 7px rgba(66, 68, 90, 0.4);
+
+// Transitions:
+$transition-primary: all 0.15s ease-out;

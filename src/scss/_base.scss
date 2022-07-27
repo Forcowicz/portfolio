@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 100vh;
+  min-height: 100vh;
+
+  font-size: 62.5%;
+
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  font-family: $ff-primary;
+  font-size: $fs-regular;
+  color: $color-white;
+
+  background-color: $color-grey;
+
+  overflow-x: hidden;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
