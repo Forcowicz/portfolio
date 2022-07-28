@@ -10,6 +10,10 @@
   background-color: $color-black;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 html {
   min-width: 100vh;
   min-height: 100vh;

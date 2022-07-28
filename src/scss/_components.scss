@@ -46,7 +46,7 @@
   }
 }
 
-.projects-container {
+.cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: map-get($spacings, 3);
@@ -55,7 +55,7 @@
   padding: map-get($spacings, 4);
 }
 
-.project {
+.card {
   position: relative;
 
   height: 36rem;
