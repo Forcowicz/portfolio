@@ -8,7 +8,7 @@
   }
 
   &__presentation {
-    @include flex(0, initial, center, column);
+    @include flex(0, initial, initial, column);
 
     padding: map-get($spacings, 4) map-get($spacings, 4) map-get($spacings, 4) 0;
 
@@ -35,5 +35,77 @@
     @include flex(map-get($spacings, 2), space-between, center);
 
     width: 100%;
+  }
+}
+
+.work {
+  &__heading {
+    font-size: $fs-large;
+    color: $color-primary;
+    text-align: center;
+  }
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: map-get($spacings, 3);
+
+  margin-top: map-get($spacings, 3);
+  padding: map-get($spacings, 4);
+}
+
+.project {
+  position: relative;
+
+  height: 36rem;
+
+  margin: 0;
+
+  box-shadow: $shadow-grey-normal;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover > &__content {
+    transform: scaleY(1);
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  &__content {
+    @include flex(map-get($spacings, 4), center, center, column);
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    padding: map-get($spacings, 2) map-get($spacings, 3);
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    transition: $transition-primary;
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+
+  &__heading {
+    margin: 0;
+
+    font-size: 2.8rem;
+    color: $color-primary;
+  }
+
+  &__cta {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $color-primary;
   }
 }

@@ -14,6 +14,8 @@
     />
     <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="./scss/main.scss" />
+
+    <script src="./js/index.js" defer type="module"></script>
   </head>
   <body>
     <header class="header">
@@ -23,13 +25,49 @@
         <h2 class="header__subheading">Lorem ipsum dolor sit amet.</h2>
 
         <div class="header__buttons">
-          <a href="#" class="btn btn--primary btn--block">My Work</a>
-          <a href="#" class="btn btn--secondary btn--block">
+          <a href="#my-work" class="btn btn--primary btn--block">My Work</a>
+          <a href="https://github.com/Forcowicz" class="btn btn--secondary btn--block">
             <i class="bi bi-github"></i>
             <span>GitHub</span>
           </a>
         </div>
       </div>
     </header>
+
+    <main class="work" id="my-work">
+      <h3 class="work__heading">My Work</h3>
+
+      <div class="projects-container">
+        <figure class="project">
+          <img src="./img/lart.jpg" alt="" class="project__img" />
+
+          <div class="project__content">
+            <h5 class="project__heading">Liceum Aktorskie</h5>
+
+            <span class="project__cta">Click to see more!</span>
+          </div>
+        </figure>
+
+        <figure class="project">
+          <img src="./img/lart.jpg" alt="" class="project__img" />
+
+          <div class="project__content">
+            <h5 class="project__heading">Liceum Aktorskie</h5>
+
+            <span class="project__cta">Click to see more!</span>
+          </div>
+        </figure>
+
+        <figure class="project">
+          <img src="./img/lart.jpg" alt="" class="project__img" />
+
+          <div class="project__content">
+            <h5 class="project__heading">Liceum Aktorskie</h5>
+
+            <span class="project__cta">Click to see more!</span>
+          </div>
+        </figure>
+      </div>
+    </main>
   </body>
 </html>

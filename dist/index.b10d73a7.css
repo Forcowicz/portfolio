@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  color: #ffd131;
+  background-color: #000;
+}
+
 html {
   min-width: 100vh;
   min-height: 100vh;
@@ -98,9 +103,9 @@ a, a:link, a:visited {
 
 .header__presentation {
   justify-content: initial;
+  align-items: initial;
   flex-direction: column;
   flex: 1;
-  align-items: center;
   gap: 0;
   padding: 5.6rem 5.6rem 5.6rem 0;
   display: flex;
@@ -125,6 +130,69 @@ a, a:link, a:visited {
   align-items: center;
   gap: 1.4rem;
   display: flex;
+}
+
+.work__heading {
+  color: #ffd131;
+  text-align: center;
+  font-size: 3.2rem;
+}
+
+.projects-container {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.8rem;
+  margin-top: 2.8rem;
+  padding: 5.6rem;
+  display: grid;
+}
+
+.project {
+  height: 36rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 24px 1px #42445a66;
+}
+
+.project:hover > .project__content {
+  transform: scaleY(1);
+}
+
+.project__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project__content {
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom;
+  background-color: #000000b3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5.6rem;
+  padding: 1.4rem 2.8rem;
+  transition: all .15s ease-out;
+  display: flex;
+  position: absolute;
+  inset: 0;
+  transform: scaleY(0);
+}
+
+.project__heading {
+  color: #ffd131;
+  margin: 0;
+  font-size: 2.8rem;
+}
+
+.project__cta {
+  text-transform: uppercase;
+  color: #ffd131;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=index.b10d73a7.css.map */
