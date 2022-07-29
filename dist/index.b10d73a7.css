@@ -80,6 +80,14 @@ p {
   inset: 0;
 }
 
+.section-heading {
+  color: #2b2b2b;
+  text-align: center;
+  background-color: #ffd131;
+  padding: 1.4rem;
+  font-size: 3.2rem;
+}
+
 .btn {
   text-align: center;
   border-radius: 3px;
@@ -128,6 +136,8 @@ p {
 
 .header {
   width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #0000, #000), url("header-background.c1e1671a.jpg") 0 / cover no-repeat;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -156,6 +166,7 @@ p {
 }
 
 .header__subheading {
+  color: #ffd131;
   margin: 0 0 5.6rem;
   font-size: 2.2rem;
   font-weight: 400;
@@ -168,12 +179,6 @@ p {
   align-items: center;
   gap: 1.4rem;
   display: flex;
-}
-
-.work__heading {
-  color: #ffd131;
-  text-align: center;
-  font-size: 3.2rem;
 }
 
 .cards-container {

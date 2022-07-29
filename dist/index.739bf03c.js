@@ -653,11 +653,10 @@ const generateProjectHTML = function(data) {
 const generateProjectImages = function(data) {
     const images = data.images.split(";");
     const img1 = new Image();
-    img1.setAttribute("src", `./img/${images[0]}`);
-    // img1.src = `./img/${images[0]}`;
-    img1.classList.add("project__img");
+    img1.src = `../img/lart.jpg`;
+    img1.src = require(`.././img/${images[0]}.png`);
     const img2 = new Image();
-    // img2.src = `./img/${images[1]}`;
+    img2.src = require(".././img/" + images[1] + ".png");
     img2.classList.add("project__img");
     return [
         img1,

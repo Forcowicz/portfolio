@@ -28,3 +28,13 @@
 
   transition: $transition-primary;
 }
+
+.section-heading {
+  padding: map-get($spacings, 2);
+
+  font-size: $fs-large;
+  color: $color-grey;
+  text-align: center;
+
+  background-color: $color-primary;
+}
