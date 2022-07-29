@@ -63,7 +63,7 @@
   margin: 0;
 
   box-shadow: $shadow-grey-normal;
-  border-radius: 8px;
+  border-radius: $border-radius;
   overflow: hidden;
   cursor: pointer;
 
@@ -107,5 +107,95 @@
     text-transform: uppercase;
     font-weight: 600;
     color: $color-primary;
+  }
+}
+
+.project {
+  @include flex(0, initial, initial, column);
+
+  width: 80%;
+
+  background-color: $color-grey;
+
+  border-radius: $border-radius;
+  box-shadow: $shadow-grey-normal;
+
+  &__img-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+
+    height: 32%;
+
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+
+    &:first-child {
+      border-right: 1px solid $color-primary;
+    }
+  }
+
+  &__content {
+    @include flex(0, initial, center, column);
+
+    position: relative;
+
+    flex: 1;
+    height: 100%;
+
+    padding: map-get($spacings, 4);
+  }
+
+  &__heading {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    padding: map-get($spacings, 1) map-get($spacings, 2);
+    margin: 0;
+
+    color: $color-primary;
+    font-size: $fs-large;
+    text-transform: uppercase;
+
+    background-color: $color-secondary;
+
+    transform: translate(-50%, -50%);
+    border-radius: $border-radius;
+  }
+
+  &__details {
+    @include flex(map-get($spacings, 4), space-around, center);
+
+    margin-bottom: map-get($spacings, 3);
+  }
+
+  &__details-item {
+    @include flex(map-get($spacings, 2));
+
+    font-size: $fs-small;
+  }
+
+  &__details-icon {
+    color: $color-primary;
+  }
+
+  &__details-name {
+  }
+
+  &__description {
+    margin-bottom: map-get($spacings, 4);
+
+    hyphens: auto;
+    text-align: center;
+  }
+
+  &__buttons {
+    @include flex(map-get($spacings, 2));
+
+    width: 80%;
   }
 }

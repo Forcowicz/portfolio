@@ -1,5 +1,5 @@
 .btn {
-  display: inline-block;
+  @include flex(map-get($spacings, 1), center, center);
 
   padding: map-get($spacings, 2) map-get($spacings, 3);
 
