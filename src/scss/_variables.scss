@@ -15,8 +15,16 @@ $fs-large: 3.2rem;
 $fs-regular: 1.6rem;
 $fs-small: 1.2rem;
 
-// Spacer:
+// Spacings:
 $spacer: 1.4rem;
+
+$spacings: (
+  1: $spacer * 0.5,
+  2: $spacer,
+  3: $spacer * 2,
+  4: $spacer * 4,
+  5: $spacer * 8,
+);
 
 // Shadows:
 $shadow-primary-normal: 0px 5px 24px 1px rgba(255, 209, 49, 0.4);
@@ -25,8 +33,8 @@ $shadow-primary-spread: 0px 5px 39px 7px rgba(255, 209, 49, 0.4);
 $shadow-secondary-normal: 0px 5px 24px 1px rgba(9, 4, 70, 0.4);
 $shadow-secondary-spread: 0px 5px 39px 7px rgba(9, 4, 70, 0.4);
 
-$shadow-grey-normal: 0px 5px 24px 1px rgba(66, 68, 90, 0.4);
-$shadow-grey-spread: 0px 5px 39px 7px rgba(66, 68, 90, 0.4);
+$shadow-grey-normal: 0px 5px 24px 1px rgba(37, 37, 37, 0.6);
+$shadow-grey-spread: 0px 5px 39px 7px rgba(37, 37, 37, 0.6);
 
 // Transitions:
 $transition-primary: all 0.15s ease-out;

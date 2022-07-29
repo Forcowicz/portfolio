@@ -1,3 +1,8 @@
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 *, :before, :after {
   box-sizing: border-box;
 }
@@ -69,6 +74,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 0;
+  transition: all .15s ease-out;
   display: flex;
   position: fixed;
   inset: 0;
@@ -85,11 +91,11 @@ p {
   font-weight: 500;
   transition: all .15s ease-out;
   display: flex;
-  box-shadow: 0 5px 24px 1px #42445a66;
+  box-shadow: 0 5px 24px 1px #25252599;
 }
 
 .btn:hover {
-  box-shadow: 0 5px 39px 7px #42445a66;
+  box-shadow: 0 5px 39px 7px #25252599;
 }
 
 .btn > .bi {
@@ -185,7 +191,7 @@ p {
   margin: 0;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 5px 24px 1px #42445a66;
+  box-shadow: 0 5px 24px 1px #25252599;
 }
 
 .card:hover > .card__content {
@@ -236,7 +242,7 @@ p {
   flex-direction: column;
   gap: 0;
   display: flex;
-  box-shadow: 0 5px 24px 1px #42445a66;
+  box-shadow: 0 5px 24px 1px #25252599;
 }
 
 .project__img-container {

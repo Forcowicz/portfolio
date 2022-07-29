@@ -532,8 +532,139 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"ebWYT":[function(require,module,exports) {
+var _backdrop = require("./backdrop");
+var _project = require("./project");
 "use strict";
+// Initializing backdrop
+const backdropDOM = document.querySelector(".backdrop");
+backdropDOM.addEventListener("click", (e)=>{
+    if (e.target === backdropDOM) (0, _backdrop.disableBackdrop)();
+});
+// Generating projects
+const cards = document.querySelectorAll(".card");
+cards.forEach((card)=>{
+    card.addEventListener("click", function() {
+        const data = {
+            ...card.dataset
+        };
+        const projectHTML = (0, _project.generateProjectHTML)(data);
+        (0, _backdrop.enableBackdrop)(projectHTML);
+        const imgElements = (0, _project.generateProjectImages)(data);
+        document.querySelector(".project__img-container").append(imgElements[0], imgElements[1]);
+    });
+});
 
-},{}]},["cVgJb","ebWYT"], "ebWYT", "parcelRequire2041")
+},{"./backdrop":"9v2K6","./project":"bBf0d"}],"9v2K6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "enableBackdrop", ()=>enableBackdrop);
+parcelHelpers.export(exports, "disableBackdrop", ()=>disableBackdrop);
+const backdropDOM = document.querySelector(".backdrop");
+const enableBackdrop = function(HTMLToInject = "") {
+    backdropDOM.insertAdjacentHTML("afterbegin", HTMLToInject);
+    backdropDOM.classList.remove("hidden");
+};
+const disableBackdrop = function() {
+    backdropDOM.classList.add("hidden");
+    backdropDOM.innerHTML = "";
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"bBf0d":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "generateProjectHTML", ()=>generateProjectHTML);
+parcelHelpers.export(exports, "generateProjectImages", ()=>generateProjectImages);
+const generateProjectHTML = function(data) {
+    const details = data.details.split(";");
+    return `
+      <div class="project">
+        <div class="project__img-container">
+        </div>
+
+      <div class="project__content">
+        <h5 class="project__heading">${data.name}</h5>
+
+        <ul class="project__details">
+          <li class="project__details-item">
+            <i class="bi bi-calendar2-date-fill project__details-icon"></i>
+            <span class="project__details-name">${details[0]}</span>
+          </li>
+          <li class="project__details-item">
+            <i class="bi bi-hammer project__details-icon"></i>
+            <span class="project__details-name">${details[1]}</span>
+          </li>
+          <li class="project__details-item">
+            <i class="bi bi-phone-fill project__details-icon"></i>
+            <span class="project__details-name">${details[2]}</span>
+          </li>
+        </ul>
+
+        <p class="project__description">
+          ${data.description}
+        </p>
+
+        <div class="project__buttons">
+          <a href="${data.websiteUrl}" target="_blank" class="btn btn--primary btn--block"
+            >See it by yourself!</a
+          >
+          <a
+            href="${data.githubUrl}"
+            target="_blank"
+            class="btn btn--secondary btn--block"
+          >
+            <i class="bi bi-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+};
+const generateProjectImages = function(data) {
+    const images = data.images.split(";");
+    const img1 = new Image();
+    img1.setAttribute("src", `./img/${images[0]}`);
+    // img1.src = `./img/${images[0]}`;
+    img1.classList.add("project__img");
+    const img2 = new Image();
+    // img2.src = `./img/${images[1]}`;
+    img2.classList.add("project__img");
+    return [
+        img1,
+        img2
+    ];
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cVgJb","ebWYT"], "ebWYT", "parcelRequire2041")
 
 //# sourceMappingURL=index.739bf03c.js.map
