@@ -329,4 +329,58 @@ p {
   display: flex;
 }
 
+#section-contact {
+  background-color: #1e1e1e;
+}
+
+.contact {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.8rem;
+  padding: 5.6rem 11.2rem;
+  display: flex;
+}
+
+.contact__item {
+  z-index: 1;
+  color: #ffd131;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.8rem;
+  transition: all .15s ease-out;
+  display: flex;
+  position: relative;
+}
+
+.contact__item:before {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transform-origin: 0;
+  background-color: #ffd131;
+  transition: all .2s cubic-bezier(.88, .16, .59, .7);
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+}
+
+.contact__item:hover:before {
+  transform: scaleX(1);
+}
+
+.contact__item:hover {
+  color: #000;
+}
+
+.contact__icon {
+  font-size: 5.2rem;
+}
+
+.contact__item-content {
+  font-size: 3.2rem;
+}
+
 /*# sourceMappingURL=index.b10d73a7.css.map */
