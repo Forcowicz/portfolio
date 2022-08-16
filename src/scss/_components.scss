@@ -128,7 +128,11 @@
   }
 
   &__img {
+    display: none;
+
     width: 100%;
+
+    overflow: hidden;
 
     &:first-child {
       border-right: 1px solid $color-primary;
@@ -323,6 +327,7 @@
 
     padding: map-get($spacings, 1) map-get($spacings, 2);
 
+    text-align: center;
     color: $color-black;
 
     background-color: $color-white;

@@ -1,6 +1,8 @@
 .btn {
   @include flex(map-get($spacings, 1), center, center);
 
+  position: relative;
+
   padding: map-get($spacings, 2) map-get($spacings, 3);
 
   text-align: center;
@@ -43,5 +45,21 @@
 
   &--block {
     width: 100%;
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+
+    &::before {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: rgba($color-grey, 0.6);
+
+      content: "";
+    }
   }
 }

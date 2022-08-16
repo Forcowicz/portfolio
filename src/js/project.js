@@ -35,7 +35,9 @@ const generateProjectHTML = function (data) {
           <a
             href="${data.githubUrl}"
             target="_blank"
-            class="btn btn--secondary btn--block"
+            class="btn btn--secondary btn--block ${
+              data.githubUrl.length === 0 ? "btn--disabled" : ""
+            }"
           >
             <i class="bi bi-github"></i>
             <span>GitHub</span>
@@ -50,10 +52,14 @@ const generateProjectImages = function (data) {
   const images = data.images.split(";");
 
   const img1 = new Image();
-  img1.src = `../img/lart.jpg`;
-  img1.src = require(`.././img/${images[0]}.png`);
+  // img1.src = `../img/lart.jpg`;
+  // img1.src = require(`../img/${images[0]}.png`);
+  // img1.src = require(`C:/Users/forco/Documents/Projects/Web Development/portfolio/src/img/number-systems-converter.png`);
   const img2 = new Image();
-  img2.src = require(".././img/" + images[1] + ".png");
+  // img2.src = require("../img/" + images[1] + ".png");
+  // img2.src = require(`C:/Users/forco/Documents/Projects/Web Development/portfolio/src/img/number-systems-converter.png`);
+
+  img1.classList.add("project__img");
   img2.classList.add("project__img");
 
   return [img1, img2];

@@ -23,6 +23,7 @@ cards.forEach((card) => {
     const projectHTML = generateProjectHTML(data);
     enableBackdrop(projectHTML);
 
+    console.log(generateProjectImages(data));
     const imgElements = generateProjectImages(data);
     document.querySelector(".project__img-container").append(imgElements[0], imgElements[1]);
   });
