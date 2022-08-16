@@ -31,6 +31,7 @@
 
 .section-heading {
   padding: map-get($spacings, 2);
+  margin: 0;
 
   font-size: $fs-large;
   color: $color-grey;
