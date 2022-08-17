@@ -34,6 +34,12 @@ body {
   overflow-x: hidden;
 }
 
+@media only screen and (max-width: 92.5em) {
+  body {
+    font-size: 1.8rem;
+  }
+}
+
 a, a:link, a:visited {
   text-decoration: none;
 }
@@ -68,8 +74,8 @@ p {
 
 .backdrop {
   z-index: 100;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #000c;
   flex-direction: row;
   justify-content: center;
@@ -103,6 +109,12 @@ p {
   display: flex;
   position: relative;
   box-shadow: 0 5px 24px 1px #25252599;
+}
+
+@media only screen and (max-width: 92.5em) {
+  .btn {
+    font-size: 2rem;
+  }
 }
 
 .btn:hover {
@@ -165,6 +177,13 @@ p {
   flex: 2;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .header__hero {
+    flex: 0;
+    display: none;
+  }
+}
+
 .header__presentation {
   justify-content: initial;
   align-items: initial;
@@ -175,10 +194,28 @@ p {
   display: flex;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .header__presentation {
+    padding: 11.2rem;
+  }
+}
+
 .header__heading {
   margin: 0 0 .7rem;
   font-size: 6.8rem;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 92.5em) {
+  .header__heading {
+    font-size: 7.8rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header__heading {
+    text-align: center;
+  }
 }
 
 .header__subheading {
@@ -186,6 +223,18 @@ p {
   margin: 0 0 5.6rem;
   font-size: 2.2rem;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 92.5em) {
+  .header__subheading {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header__subheading {
+    text-align: center;
+  }
 }
 
 .header__buttons {
@@ -197,12 +246,31 @@ p {
   display: flex;
 }
 
+@media only screen and (max-width: 38.75em) {
+  .header__buttons {
+    flex-direction: column;
+  }
+}
+
 .cards-container {
   grid-template-columns: repeat(3, 1fr);
   gap: 2.8rem;
   margin-top: 2.8rem;
   padding: 5.6rem;
   display: grid;
+}
+
+@media only screen and (max-width: 92.5em) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 5.6rem;
+  }
 }
 
 .card {
@@ -266,6 +334,12 @@ p {
   box-shadow: 0 5px 24px 1px #25252599;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .project {
+    width: 90%;
+  }
+}
+
 .project__img-container {
   height: 32%;
   grid-template-rows: 1fr;
@@ -297,6 +371,7 @@ p {
 }
 
 .project__heading {
+  width: max-content;
   color: #ffd131;
   text-transform: uppercase;
   background-color: #090446;
@@ -310,6 +385,12 @@ p {
   transform: translate(-50%, -50%);
 }
 
+@media only screen and (max-width: 38.75em) {
+  .project__heading {
+    font-size: 4.2rem;
+  }
+}
+
 .project__details {
   flex-direction: row;
   justify-content: space-around;
@@ -319,6 +400,12 @@ p {
   display: flex;
 }
 
+@media only screen and (max-width: 38.75em) {
+  .project__details {
+    margin-bottom: 5.6rem;
+  }
+}
+
 .project__details-item {
   justify-content: initial;
   align-items: initial;
@@ -326,6 +413,12 @@ p {
   gap: 1.4rem;
   font-size: 1.2rem;
   display: flex;
+}
+
+@media only screen and (max-width: 38.75em) {
+  .project__details-item {
+    font-size: 1.6rem;
+  }
 }
 
 .project__details-icon {
@@ -338,6 +431,12 @@ p {
   margin-bottom: 5.6rem;
 }
 
+@media only screen and (max-width: 38.75em) {
+  .project__description {
+    font-size: 2.2rem;
+  }
+}
+
 .project__buttons {
   justify-content: initial;
   align-items: initial;
@@ -345,6 +444,13 @@ p {
   flex-direction: row;
   gap: 1.4rem;
   display: flex;
+}
+
+@media only screen and (max-width: 38.75em) {
+  .project__buttons {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 
 #section-contact {
@@ -402,7 +508,7 @@ p {
 }
 
 .skills {
-  flex-direction: row;
+  flex-flow: wrap;
   justify-content: center;
   align-items: center;
   gap: 2.8rem;

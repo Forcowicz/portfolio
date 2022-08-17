@@ -9,6 +9,11 @@
 
   &__hero {
     flex: 2;
+
+    @include respond(tab-land) {
+      display: none;
+      flex: 0;
+    }
   }
 
   &__presentation {
@@ -17,6 +22,10 @@
     padding: map-get($spacings, 4) map-get($spacings, 4) map-get($spacings, 4) 0;
 
     flex: 1;
+
+    @include respond(tab-land) {
+      padding: map-get($spacings, 5);
+    }
   }
 
   &__heading {
@@ -25,6 +34,14 @@
 
     font-size: 6.8rem;
     font-weight: 700;
+
+    @include respond(desktop) {
+      font-size: 7.8rem;
+    }
+
+    @include respond(tab-land) {
+      text-align: center;
+    }
   }
 
   &__subheading {
@@ -34,12 +51,24 @@
     font-size: 2.2rem;
     font-weight: 400;
     color: $color-primary;
+
+    @include respond(desktop) {
+      font-size: 3.2rem;
+    }
+
+    @include respond(tab-land) {
+      text-align: center;
+    }
   }
 
   &__buttons {
     @include flex(map-get($spacings, 2), space-between, center);
 
     width: 100%;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -50,6 +79,15 @@
 
   margin-top: map-get($spacings, 3);
   padding: map-get($spacings, 4);
+
+  @include respond(desktop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(tab-land) {
+    grid-template-columns: 1fr;
+    gap: map-get($spacings, 4);
+  }
 }
 
 .card {
@@ -117,6 +155,10 @@
   border-radius: $border-radius;
   box-shadow: $shadow-grey-normal;
 
+  @include respond(tab-land) {
+    width: 90%;
+  }
+
   &__img-container {
     display: grid;
     grid-template-rows: 1fr;
@@ -155,6 +197,8 @@
     top: 0;
     left: 50%;
 
+    width: max-content;
+
     padding: map-get($spacings, 1) map-get($spacings, 2);
     margin: 0;
 
@@ -166,18 +210,30 @@
 
     transform: translate(-50%, -50%);
     border-radius: $border-radius;
+
+    @include respond(tab-port) {
+      font-size: 4.2rem;
+    }
   }
 
   &__details {
     @include flex(map-get($spacings, 4), space-around, center);
 
     margin-bottom: map-get($spacings, 3);
+
+    @include respond(tab-port) {
+      margin-bottom: map-get($spacings, 4);
+    }
   }
 
   &__details-item {
     @include flex(map-get($spacings, 2));
 
     font-size: $fs-small;
+
+    @include respond(tab-port) {
+      font-size: $fs-regular;
+    }
   }
 
   &__details-icon {
@@ -192,12 +248,22 @@
 
     hyphens: auto;
     text-align: center;
+
+    @include respond(tab-port) {
+      font-size: 2.2rem;
+    }
   }
 
   &__buttons {
     @include flex(map-get($spacings, 2));
 
     width: 80%;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+
+      width: 100%;
+    }
   }
 }
 
@@ -256,6 +322,7 @@
 
 .skills {
   @include flex(map-get($spacings, 3), center, center);
+  flex-wrap: wrap;
 
   padding: map-get($spacings, 4) map-get($spacings, 5);
 }

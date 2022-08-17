@@ -5,3 +5,35 @@
   align-items: $align-items;
   gap: $gap;
 }
+
+// MEDIA QUERIES
+
+// 1480px - 92.5em
+// 900px - 56.25em
+// 620px - 38.75em
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 92.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 38.75em) {
+      @content;
+    }
+  }
+
+  // @if $breakpoint == phone {
+  //   @media only screen and (max-width: 92.5em) {
+  //     @content;
+  //   }
+  // }
+}

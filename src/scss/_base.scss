@@ -36,6 +36,10 @@ body {
   background-color: $color-grey;
 
   overflow-x: hidden;
+
+  @include respond(desktop) {
+    font-size: 1.8rem;
+  }
 }
 
 a,

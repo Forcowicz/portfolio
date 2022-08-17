@@ -12,6 +12,10 @@
   box-shadow: $shadow-grey-normal;
   transition: $transition-primary;
 
+  @include respond(desktop) {
+    font-size: 2rem;
+  }
+
   &:hover {
     box-shadow: $shadow-grey-spread;
   }
