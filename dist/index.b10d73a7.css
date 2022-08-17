@@ -306,8 +306,17 @@ p {
   transition: all .15s ease-out;
   display: flex;
   position: absolute;
-  inset: 0;
+  bottom: 0;
+  left: 0;
   transform: scaleY(0);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .card__content {
+    height: 24%;
+    gap: 1.4rem;
+    transform: scaleY(1);
+  }
 }
 
 .card__heading {
@@ -316,10 +325,22 @@ p {
   font-size: 2.8rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+  .card__heading {
+    font-size: 2.4rem;
+  }
+}
+
 .card__cta {
   text-transform: uppercase;
   color: #ffd131;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .card__cta {
+    font-size: 1.2rem;
+  }
 }
 
 .project {
@@ -402,6 +423,7 @@ p {
 
 @media only screen and (max-width: 38.75em) {
   .project__details {
+    gap: 1.4rem;
     margin-bottom: 5.6rem;
   }
 }
